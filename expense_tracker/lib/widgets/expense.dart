@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
@@ -29,9 +31,14 @@ class _Expenses extends State<Expenses> {
 
   void _openedAddExpenseOverlay() {
     showModalBottomSheet(
+      isScrollControlled: true,
       context: context,
-      builder: (ctx) => const NewExpense(),
+      builder: (ctx) => NewExpense(onAddExpense: _addExpense),
     );
+  }
+
+  void _addExpense(Expense expense) {
+    setState(() => _registeredExpenses.add(expense));
   }
 
   @override
