@@ -6,11 +6,8 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:expense_tracker/widgets/expense.dart';
-import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:expense_tracker/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
