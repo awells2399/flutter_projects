@@ -1,2 +1,3 @@
 supporting_flutter_files_etc/*
 todo_app/*
+shopping_list/lib/constants.dart
